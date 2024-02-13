@@ -44,8 +44,8 @@ body .header {
   width: 100%;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.2941176471);
-  padding-bottom: 0.5rem;
   backdrop-filter: blur(15px);
+  padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +55,47 @@ body .header-nav {
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
+}
+body .header-nav .burglist {
+  display: none;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+@media screen and (max-width: 760px) {
+  body .header-nav .burglist {
+    display: block;
+  }
+}
+body .header-nav .burglist label:hover {
+  cursor: pointer;
+}
+body .header-nav .burglist input {
+  display: none;
+}
+body .header-nav .burglist input:checked + ul {
+  opacity: 1;
+  visibility: visible;
+}
+body .header-nav .burglist ul {
+  background-color: #ffffff;
+  position: absolute;
+  width: 10rem;
+  height: 100vh;
+  top: 1.9rem;
+  right: -1rem;
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 350ms ease;
+}
+body .header-nav .burglist ul li a {
+  display: block;
+  color: #081d43;
+  padding: 1rem;
 }
 body .header-nav__left {
   display: flex;

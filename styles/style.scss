@@ -42,8 +42,8 @@ body {
     width: 100%;
     position: fixed;
     background-color: #ffffff4b;
-    padding-bottom: 0.5rem;
     backdrop-filter: blur(15px);
+    padding-bottom: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,6 +54,52 @@ body {
       justify-content: space-between;
       padding-top: 1rem;
 
+      .burglist {
+        display: none;
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        @media screen and (max-width: 760px) {
+          display: block;
+        }
+        label {
+          svg {
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        input {
+          display: none;
+          &:checked + ul {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        ul {
+          background-color: #ffffff;
+          position: absolute;
+          width: 10rem;
+          height: 100vh;
+          top: 1.9rem;
+          right: -1rem;
+          padding: 0;
+          margin: 0;
+          direction: rtl;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 350ms ease;
+
+          li {
+            a {
+              display: block;
+              color: #081d43;
+              padding: 1rem;
+            }
+          }
+        }
+      }
       &__left {
         display: flex;
         align-items: center;
