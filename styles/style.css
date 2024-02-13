@@ -17,6 +17,16 @@ html body .container {
   padding-right: 1rem;
   padding-left: 1rem;
 }
+@media screen and (max-width: 980px) {
+  html body .container {
+    max-width: 50rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  html body .container {
+    min-width: 100%;
+  }
+}
 html body a {
   text-decoration: none;
 }
@@ -36,6 +46,9 @@ body .header {
   background-color: rgba(255, 255, 255, 0.2941176471);
   padding-bottom: 0.5rem;
   backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body .header-nav {
   display: flex;
@@ -51,11 +64,21 @@ body .header-nav__left {
 body .header-nav__left img {
   margin-right: 1rem;
 }
+@media screen and (max-width: 760px) {
+  body .header-nav__left img {
+    width: 80%;
+  }
+}
 body .header-nav__left ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
+}
+@media screen and (max-width: 760px) {
+  body .header-nav__left ul {
+    display: none;
+  }
 }
 body .header-nav__left ul li a {
   padding: 0 1rem;
@@ -68,14 +91,31 @@ body .header-nav__right a {
   color: #ffffff;
   background-color: #0050c8;
 }
+@media screen and (max-width: 760px) {
+  body .header-nav__right a {
+    display: none;
+  }
+}
 body main .about {
   display: flex;
   justify-content: space-between;
   gap: 3rem;
   padding-top: 6rem;
 }
+@media screen and (max-width: 760px) {
+  body main .about {
+    flex-direction: column;
+    padding-top: 5rem;
+  }
+}
 body main .about_left {
   width: 50%;
+}
+@media screen and (max-width: 760px) {
+  body main .about_left {
+    width: 100%;
+    text-align: center;
+  }
 }
 body main .about_left h2 {
   margin-top: 0;
@@ -98,12 +138,23 @@ body main .about_left a {
 body main .about_right {
   width: 50%;
 }
+@media screen and (max-width: 760px) {
+  body main .about_right {
+    width: 100%;
+  }
+}
 body main .about_right img {
   width: 100%;
+  height: 100%;
 }
 body main .howitworks {
   text-align: center;
   padding: 6rem 0 3rem;
+}
+@media screen and (max-width: 760px) {
+  body main .howitworks {
+    padding: 2rem 0;
+  }
 }
 body main .howitworks span {
   color: #6c7890;
@@ -117,6 +168,14 @@ body main .howitworks_items {
   align-items: center;
   gap: 3rem;
 }
+@media screen and (max-width: 760px) {
+  body main .howitworks_items {
+    flex-direction: column;
+    gap: 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 body main .howitworks_items p {
   color: #6c7890;
   line-height: 1.3rem;
@@ -124,11 +183,17 @@ body main .howitworks_items p {
 body main .howitworks img {
   width: 440px;
 }
+@media screen and (max-width: 760px) {
+  body main .howitworks img {
+    width: 100%;
+  }
+}
 body main .clients {
   text-align: center;
   background-color: #0050c8;
   padding: 2rem 0;
   color: #fff;
+  width: 100%;
 }
 body main .clients h2 {
   margin: 0;
@@ -140,6 +205,11 @@ body main .clients_p {
   margin: 0.8rem auto;
   line-height: 1.9rem;
 }
+@media screen and (max-width: 760px) {
+  body main .clients_p {
+    width: 70%;
+  }
+}
 body main .clients_box {
   margin: 3rem 0;
   color: #000;
@@ -147,6 +217,14 @@ body main .clients_box {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+}
+@media screen and (max-width: 760px) {
+  body main .clients_box {
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    gap: 1rem;
+  }
 }
 body main .clients_boxitem {
   background-color: #fff;
@@ -183,9 +261,23 @@ body main .clients_logo {
   align-items: center;
   margin-top: 6rem;
 }
+@media screen and (max-width: 760px) {
+  body main .clients_logo {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+}
 body main .portfolio {
   text-align: center;
   padding: 4rem 0;
+}
+@media screen and (max-width: 760px) {
+  body main .portfolio {
+    padding: 2rem 0 1rem;
+  }
 }
 body main .portfolio h2 {
   margin-top: 0.8rem;
@@ -199,7 +291,12 @@ body main .portfolio div {
   gap: 1rem;
 }
 body main .portfolio div img {
-  width: 32%;
+  width: 30%;
+}
+@media screen and (max-width: 760px) {
+  body main .portfolio div img {
+    width: 100%;
+  }
 }
 body .footer {
   background-color: #0050c8;
@@ -210,6 +307,12 @@ body .footer_top {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+}
+@media screen and (max-width: 760px) {
+  body .footer_top {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 body .footer_top div {
   position: relative;
